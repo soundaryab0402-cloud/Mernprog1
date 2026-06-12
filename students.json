@@ -1,0 +1,17 @@
+[
+  {
+    "name": "John Doe",
+    "age": 20,
+    "course": "BCA"
+  },
+  {
+    "name": "Alice Johnson",
+    "age": 21,
+    "course": "BSc"
+  },
+  {
+    "name": "Johnny Smith",
+    "age": 22,
+    "course": "BCom"
+  }
+]

@@ -1,0 +1,12 @@
+import { MongoClient } from "mongodb"; 
+import fs from "fs"; 
+const url = "mongodb://localhost:27017"; 
+const data = JSON.parse(fs.readFileSync("data.json"));  
+const client = new MongoClient(url); 
+client.connect(); 
+console.log("Connected successfully"); 
+const db = client.db("usermanaged"); 
+const collection = db.collection("transactions"); 
+const result = await collection.deleteMany({ $or: data }); 
+console.log(`Deleted ${result.deletedCount} documents`); 
+client.close();
